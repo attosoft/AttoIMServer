@@ -1,0 +1,19 @@
+syntax = "proto3";
+package cn.id0755.im.chat.proto;
+
+
+message TopicRequest {
+     string topic = 1;
+}
+
+
+message TopicResponse {
+
+    enum Error {
+        ERR_OK = 0;
+        ERR_SYS = -1;
+    }
+
+     int32 err_code = 1;
+     string err_msg = 2;
+}

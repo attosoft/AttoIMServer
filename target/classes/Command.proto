@@ -1,0 +1,18 @@
+syntax = "proto3";
+package cn.id0755.im.chat.proto;
+
+enum CMD_ID {
+//    CMD_ID_INVALID = -1;
+    CMD_ID_UNKNOWN = 0;
+    CMD_ID_HELLO = 1;
+    CMD_ID_AUTH = 2;
+    CMD_ID_SEND_MESSAGE = 3;
+    CMD_ID_CONVERSATION_LIST = 4;
+    CMD_ID_JOINTOPIC = 5;
+    CMD_ID_LEFTTOPIC = 7;
+}
+
+message Protocol {
+     CMD_ID cmdId = 1;
+     bytes content = 2;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package cn.id0755.im.chat.proto;
+
+
+message MessagePush {
+     string topic = 1;
+     string content = 2;
+     string from = 3;
+}
