@@ -2,28 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="012ea21b-93bc-4c13-830e-821d5fdc5ba9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/id0755/im/server/utils/ConsoleLoggerImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/proto/HeartBeat.proto" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/id0755/im/server/handler/CommandReqHandler.java" afterPath="$PROJECT_DIR$/src/main/java/cn/id0755/im/server/handler/CommandReqHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/id0755/im/server/utils/L.java" afterPath="$PROJECT_DIR$/src/main/java/cn/id0755/im/server/utils/L.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/id0755/im/server/utils/MessageUtil.java" afterPath="$PROJECT_DIR$/src/main/java/cn/id0755/im/server/utils/MessageUtil.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/SubReqClient.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/SubReqClientHandler.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/proto/Message.proto" afterPath="$PROJECT_DIR$/src/main/proto/Message.proto" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/SubscribeReq.proto" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/SubscribeResp.proto" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/user.proto" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/Message.proto" afterPath="$PROJECT_DIR$/target/classes/Message.proto" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message$CMD_ID$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message$CMD_ID$1.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message$CMD_ID.class" afterPath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message$CMD_ID.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message$MessageData$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message$MessageData$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message$MessageData$Builder.class" afterPath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message$MessageData$Builder.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message$MessageData.class" afterPath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message$MessageData.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message.class" afterPath="$PROJECT_DIR$/target/classes/cn/id0755/im/chat/proto/Message.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/proto/SubscribeReqProto$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/proto/SubscribeReqProto$SubscribeReq$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/proto/SubscribeReqProto$SubscribeReq$Builder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/proto/SubscribeReqProto$SubscribeReq.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/proto/SubscribeReqProto$SubscribeReqOrBuilder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/proto/SubscribeReqProto.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/proto/SubscribeRespProto$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/proto/SubscribeRespProto$SubscribeResp$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/proto/SubscribeRespProto$SubscribeResp$Builder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/proto/SubscribeRespProto$SubscribeResp.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/proto/SubscribeRespProto$SubscribeRespOrBuilder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/proto/SubscribeRespProto.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/server/handler/CommandReqHandler$1.class" afterPath="$PROJECT_DIR$/target/classes/cn/id0755/im/server/handler/CommandReqHandler$1.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/server/handler/CommandReqHandler.class" afterPath="$PROJECT_DIR$/target/classes/cn/id0755/im/server/handler/CommandReqHandler.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/server/utils/L.class" afterPath="$PROJECT_DIR$/target/classes/cn/id0755/im/server/utils/L.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/server/utils/MessageWrapperUtils.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/id0755/im/server/utils/MessageUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/id0755/im/server/utils/MessageUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rock/example/com/model/UserProto$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rock/example/com/model/UserProto$UserData$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rock/example/com/model/UserProto$UserData$Builder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rock/example/com/model/UserProto$UserData.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rock/example/com/model/UserProto$UserDataOrBuilder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rock/example/com/model/UserProto.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/SubReqClient$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/SubReqClient.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/SubReqClientHandler.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/user.proto" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/cn/id0755/im/chat/proto/Message.java" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/cn/id0755/im/chat/proto/Message.java" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/cn/id0755/im/proto/SubscribeReqProto.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/cn/id0755/im/proto/SubscribeRespProto.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/rock/example/com/model/UserProto.java" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,11 +55,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CommandReqHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CommandReqHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/id0755/im/server/handler/CommandReqHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="30" column="50" lean-forward="true" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+            <state relative-caret-position="372">
+              <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,15 +67,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Chat.proto" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/proto/Chat.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MessageUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/id0755/im/server/utils/MessageUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="14" column="69" lean-forward="true" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#308#331#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.proto" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/proto/Message.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="1" column="32" lean-forward="false" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,16 +102,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1-sources.jar!/com/google/protobuf/Parser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="111" column="21" lean-forward="false" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -141,7 +167,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="213">
               <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-              <folding />
+              <folding>
+                <marker date="1535893832619" expanded="false" signature="0:104" ph="/.../" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -172,6 +200,7 @@
     <findStrings>
       <find>getParserForType</find>
       <find>parseFrom</find>
+      <find>2219252</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,6 +234,7 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/id0755/im/server/utils/L.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/id0755/im/server/utils/MessageUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/id0755/im/server/handler/CommandReqHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test/SubReqClient.java" />
       </list>
     </option>
   </component>
@@ -318,14 +348,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AttoIMServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AttoIMServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AttoIMServer" type="b2602c69:ProjectViewProjectNode" />
@@ -538,16 +560,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535943996953</updated>
-      <workItem from="1535944002194" duration="24041000" />
+      <workItem from="1535944002194" duration="26542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24041000" />
+    <option name="totallyTimeSpent" value="26542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2418" height="1318" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -562,9 +583,9 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19880547" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19880547" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291592" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -814,14 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/SubReqClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="34" column="58" lean-forward="false" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final-sources.jar!/io/netty/handler/codec/protobuf/ProtobufDecoderNano.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -920,26 +933,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/proto/Chat.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/id0755/im/server/handler/Command2Handler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/proto/Message.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="32" lean-forward="false" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -997,7 +994,7 @@
         <state relative-caret-position="402">
           <caret line="38" column="56" lean-forward="false" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1049,7 +1046,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-          <folding />
+          <folding>
+            <marker date="1535893832619" expanded="false" signature="0:104" ph="/.../" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1069,19 +1068,8 @@
         <state relative-caret-position="209">
           <caret line="783" column="0" lean-forward="false" selection-start-line="783" selection-start-column="0" selection-end-line="783" selection-end-column="0" />
           <folding>
-            <element signature="e#26510#26511#0" expanded="true" />
-            <element signature="e#26565#26566#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/id0755/im/server/utils/MessageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="14" column="69" lean-forward="true" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#308#331#0" expanded="true" />
+            <element signature="e#26510#26511#0" expanded="false" />
+            <element signature="e#26565#26566#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1126,13 +1114,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/id0755/im/server/utils/MessageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/Message.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="32" lean-forward="false" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/id0755/im/server/handler/CommandReqHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="30" column="50" lean-forward="true" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+        <state relative-caret-position="372">
+          <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/Chat.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/SubReqClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

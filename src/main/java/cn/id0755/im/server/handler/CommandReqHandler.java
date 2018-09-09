@@ -24,33 +24,33 @@ public class CommandReqHandler extends SimpleChannelInboundHandler<Message.Messa
                         .parseFrom(content);
                 L.d(TAG, "CMD_HELLO" + sendMessageRequest.toString());
                 break;
-            case CMD_LOGIN_REQ: {
+            case LOGIN_REQ: {
                 Login.LoginRequest loginRequest = Login.LoginRequest.getDefaultInstance()
                         .getParserForType()
                         .parseFrom(msg.getContent());
                 L.d(TAG, loginRequest.toString());
                 Login.LoginResponse.Builder builder = Login.LoginResponse.newBuilder();
                 builder.setAccessToken(loginRequest.getAccount());
-                ctx.writeAndFlush(MessageUtil.wrap(builder.build()));
+                ctx.writeAndFlush(MessageUtil.wrap(Message.CMD_ID.LOGIN_RESP, builder.build()));
             }
             break;
-            case CMD_LOGIN_RESP: {
+            case LOGIN_RESP: {
                 Login.LoginResponse loginResponse = Login.LoginResponse.getDefaultInstance()
                         .getParserForType()
                         .parseFrom(msg.getContent());
                 L.d(TAG, loginResponse.toString());
             }
             break;
-            case CMD_PING:{
+            case PING: {
                 HeartBeat.Pong pong = HeartBeat.Pong
                         .newBuilder()
-                        .setCmdId(Message.CMD_ID.CMD_PONG)
+                        .setCmdId(Message.CMD_ID.PONG)
                         .build();
-                ctx.writeAndFlush(MessageUtil.wrap(pong));
+                ctx.writeAndFlush(MessageUtil.wrap(Message.CMD_ID.PONG, pong));
             }
 
-                break;
-            case CMD_PONG:
+            break;
+            case PONG:
                 break;
             default:
                 break;
@@ -65,7 +65,7 @@ public class CommandReqHandler extends SimpleChannelInboundHandler<Message.Messa
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
 //        super.exceptionCaught(ctx, cause);
-        L.d(TAG,"CommandReqHandler | exceptionCaught | cause:"+cause.getMessage());
+        L.d(TAG, "CommandReqHandler | exceptionCaught | cause:" + cause.getMessage());
         cause.printStackTrace();
         ctx.close();
     }
