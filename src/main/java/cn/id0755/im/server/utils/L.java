@@ -5,7 +5,8 @@ import org.slf4j.LoggerFactory;
 
 public class L {
     private final static String TAG = "logger";
-    private static Logger logger = LoggerFactory.getLogger(TAG);
+    //    private static Logger logger = LoggerFactory.getLogger(TAG);
+    private static Logger logger = new ConsoleLoggerImpl();
 
     public static void v(String tag, String logStr, Object... args) {
         logger.info(appendTag(tag, logStr), args);

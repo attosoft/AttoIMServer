@@ -1,6 +1,7 @@
 package cn.id0755.im.server.handler;
 
 import cn.id0755.im.chat.proto.Chat;
+import cn.id0755.im.chat.proto.HeartBeat;
 import cn.id0755.im.chat.proto.Login;
 import cn.id0755.im.chat.proto.Message;
 import cn.id0755.im.server.utils.L;
@@ -13,7 +14,7 @@ public class CommandReqHandler extends SimpleChannelInboundHandler<Message.Messa
     private final static String TAG = "CommandReqHandler";
 
     protected void channelRead0(ChannelHandlerContext ctx, Message.MessageData msg) throws Exception {
-        L.d("", "");
+        L.d(TAG, "CommandReqHandler | channelRead0 | " + msg.getCmdId());
         switch (msg.getCmdId()) {
             case CMD_AUTH:
                 break;
@@ -21,14 +22,16 @@ public class CommandReqHandler extends SimpleChannelInboundHandler<Message.Messa
                 ByteString content = msg.getContent();
                 Chat.SendMessageRequest sendMessageRequest = Chat.SendMessageRequest.getDefaultInstance().getParserForType()
                         .parseFrom(content);
-                L.d("CMD_ID_HELLO", "" + sendMessageRequest.toString());
+                L.d(TAG, "CMD_HELLO" + sendMessageRequest.toString());
                 break;
             case CMD_LOGIN_REQ: {
                 Login.LoginRequest loginRequest = Login.LoginRequest.getDefaultInstance()
                         .getParserForType()
                         .parseFrom(msg.getContent());
                 L.d(TAG, loginRequest.toString());
-                ctx.writeAndFlush(MessageUtil.wrap(response()));
+                Login.LoginResponse.Builder builder = Login.LoginResponse.newBuilder();
+                builder.setAccessToken(loginRequest.getAccount());
+                ctx.writeAndFlush(MessageUtil.wrap(builder.build()));
             }
             break;
             case CMD_LOGIN_RESP: {
@@ -38,14 +41,32 @@ public class CommandReqHandler extends SimpleChannelInboundHandler<Message.Messa
                 L.d(TAG, loginResponse.toString());
             }
             break;
+            case CMD_PING:{
+                HeartBeat.Pong pong = HeartBeat.Pong
+                        .newBuilder()
+                        .setCmdId(Message.CMD_ID.CMD_PONG)
+                        .build();
+                ctx.writeAndFlush(MessageUtil.wrap(pong));
+            }
+
+                break;
+            case CMD_PONG:
+                break;
             default:
                 break;
         }
     }
 
-    private Login.LoginResponse response(){
-        Login.LoginResponse.Builder builder = Login.LoginResponse.newBuilder();
-        builder.setAccessToken("13510773022");
-        return builder.build();
+    @Override
+    public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
+        super.userEventTriggered(ctx, evt);
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+//        super.exceptionCaught(ctx, cause);
+        L.d(TAG,"CommandReqHandler | exceptionCaught | cause:"+cause.getMessage());
+        cause.printStackTrace();
+        ctx.close();
     }
 }

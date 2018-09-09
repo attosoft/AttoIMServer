@@ -59,6 +59,14 @@ public final class Message {
      * <code>CMD_LOGIN_RESP = 9;</code>
      */
     CMD_LOGIN_RESP(9),
+    /**
+     * <code>CMD_PING = 10;</code>
+     */
+    CMD_PING(10),
+    /**
+     * <code>CMD_PONG = 11;</code>
+     */
+    CMD_PONG(11),
     UNRECOGNIZED(-1),
     ;
 
@@ -102,6 +110,14 @@ public final class Message {
      * <code>CMD_LOGIN_RESP = 9;</code>
      */
     public static final int CMD_LOGIN_RESP_VALUE = 9;
+    /**
+     * <code>CMD_PING = 10;</code>
+     */
+    public static final int CMD_PING_VALUE = 10;
+    /**
+     * <code>CMD_PONG = 11;</code>
+     */
+    public static final int CMD_PONG_VALUE = 11;
 
 
     public final int getNumber() {
@@ -131,6 +147,8 @@ public final class Message {
         case 7: return CMD_LEFTTOPIC;
         case 8: return CMD_LOGIN_REQ;
         case 9: return CMD_LOGIN_RESP;
+        case 10: return CMD_PING;
+        case 11: return CMD_PONG;
         default: return null;
       }
     }
@@ -773,11 +791,12 @@ public final class Message {
       "\n\rMessage.proto\022\027cn.id0755.im.chat.proto" +
       "\"N\n\013MessageData\022.\n\005cmdId\030\001 \001(\0162\037.cn.id07" +
       "55.im.chat.proto.CMD_ID\022\017\n\007content\030\002 \001(\014" +
-      "*\264\001\n\006CMD_ID\022\017\n\013CMD_UNKNOWN\020\000\022\r\n\tCMD_HELL" +
+      "*\320\001\n\006CMD_ID\022\017\n\013CMD_UNKNOWN\020\000\022\r\n\tCMD_HELL" +
       "O\020\001\022\014\n\010CMD_AUTH\020\002\022\024\n\020CMD_SEND_MESSAGE\020\003\022" +
       "\031\n\025CMD_CONVERSATION_LIST\020\004\022\021\n\rCMD_JOINTO" +
       "PIC\020\005\022\021\n\rCMD_LEFTTOPIC\020\007\022\021\n\rCMD_LOGIN_RE" +
-      "Q\020\010\022\022\n\016CMD_LOGIN_RESP\020\tb\006proto3"
+      "Q\020\010\022\022\n\016CMD_LOGIN_RESP\020\t\022\014\n\010CMD_PING\020\n\022\014\n" +
+      "\010CMD_PONG\020\013b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

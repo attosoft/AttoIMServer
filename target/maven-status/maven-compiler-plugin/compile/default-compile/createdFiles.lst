@@ -1,0 +1,10 @@
+cn\id0755\im\chat\proto\HeartBeat$1.class
+cn\id0755\im\chat\proto\HeartBeat$Ping.class
+cn\id0755\im\chat\proto\HeartBeat$Ping$1.class
+cn\id0755\im\chat\proto\HeartBeat.class
+cn\id0755\im\chat\proto\HeartBeat$Pong$1.class
+cn\id0755\im\chat\proto\HeartBeat$Pong.class
+cn\id0755\im\chat\proto\HeartBeat$PongOrBuilder.class
+cn\id0755\im\chat\proto\HeartBeat$PingOrBuilder.class
+cn\id0755\im\chat\proto\HeartBeat$Pong$Builder.class
+cn\id0755\im\chat\proto\HeartBeat$Ping$Builder.class
