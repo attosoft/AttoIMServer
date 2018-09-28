@@ -1,11 +1,10 @@
 package cn.id0755.im.server;
 
-import cn.id0755.im.chat.proto.Chat;
 import cn.id0755.im.chat.proto.Message;
 import cn.id0755.im.server.config.Config;
-import cn.id0755.im.server.handler.Command2Handler;
 import cn.id0755.im.server.handler.CommandReqHandler;
-import cn.id0755.im.server.handler.CustomerProtoBufDecoder;
+import cn.id0755.im.server.handler.biz.LoginHandler;
+import cn.id0755.im.server.handler.biz.PingHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -34,13 +33,16 @@ public class ImServer {
                     .handler(new LoggingHandler(LogLevel.INFO))
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
+                            //添加登录处理--实际上应由短连处理获取token
+                            CommandReqHandler commandReqHandler = new CommandReqHandler();
+                            commandReqHandler.addBizHandler(new LoginHandler());
+                            commandReqHandler.addBizHandler(new PingHandler());
                             socketChannel.pipeline()
                                     .addLast(new ProtobufVarint32FrameDecoder())
                                     .addLast(new ProtobufDecoder(Message.MessageData.getDefaultInstance()))
                                     .addLast(new ProtobufVarint32LengthFieldPrepender())
                                     .addLast(new ProtobufEncoder())
-                                    .addLast(new CommandReqHandler())
-                                    .addLast(new Command2Handler());
+                                    .addLast(commandReqHandler);
                         }
                     });
             ChannelFuture channelFuture = bootstrap.bind(Config.PORT).sync();
