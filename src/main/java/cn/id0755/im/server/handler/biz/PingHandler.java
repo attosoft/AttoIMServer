@@ -7,7 +7,7 @@ import cn.id0755.im.server.utils.MessageUtil;
 import io.netty.channel.ChannelHandlerContext;
 
 public class PingHandler extends BaseBizHandler<HeartBeat.Ping> {
-    protected void channelRead(ChannelHandlerContext ctx, HeartBeat.Ping ping) {
+    protected void channelRead(ChannelHandlerContext ctx, HeartBeat.Ping ping,String seqId) {
         HeartBeat.Pong pong = HeartBeat.Pong
                 .newBuilder()
                 .setCmdId(Message.CMD_ID.PONG)

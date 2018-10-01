@@ -6,7 +6,7 @@ import com.google.protobuf.MessageLite;
 import io.netty.channel.ChannelHandlerContext;
 
 public abstract class BaseBizHandler<Message extends MessageLite> {
-    protected abstract void channelRead(ChannelHandlerContext ctx, Message message);
+    protected abstract void channelRead(ChannelHandlerContext ctx, Message message,String seqId);
 
     protected abstract cn.id0755.im.chat.proto.Message.CMD_ID getType();
 
@@ -17,7 +17,7 @@ public abstract class BaseBizHandler<Message extends MessageLite> {
             return false;
         }
         Message message = (Message) getMessageLite().getParserForType().parseFrom(msg.getContent());
-        channelRead(ctx, message);
+        channelRead(ctx, message,msg.getSeqId());
         return true;
     }
 }
