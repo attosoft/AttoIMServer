@@ -37,7 +37,6 @@ public class ImServer {
                             commandReqHandler.addBizHandler(new LoginHandler());
                             commandReqHandler.addBizHandler(new PingHandler());
                             commandReqHandler.addBizHandler(new SubjectTopicHandler());
-                            commandReqHandler.addBizHandler(new SendMsgHandler());
                             commandReqHandler.addBizHandler(new CommonHandler());
                             socketChannel.pipeline()
                                     .addLast(new ProtobufVarint32FrameDecoder())

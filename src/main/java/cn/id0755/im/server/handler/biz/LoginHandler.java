@@ -21,6 +21,7 @@ public class LoginHandler extends BaseBizHandler<Login.LoginRequest, Login.Login
         //广播 个人在线消息
         Push.Message message = Push.Message.newBuilder()
                 .setFrom(loginRequest.getAccount())
+                .setTopicId(loginRequest.getAccount())
                 .setTo("All")
                 .setTopicType(Topic.TopicType.BROADCAST)
                 .setContent("{'status':'online'}")
