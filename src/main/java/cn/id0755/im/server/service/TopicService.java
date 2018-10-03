@@ -47,13 +47,15 @@ public enum TopicService implements ITopicService {
             }
         }
 
+        public Map<Topic.TopicType, TopicSet> getPublisherMap() {
+            return mTopicMap;
+        }
+
         public void sendMsg(Push.Message message) {
             TopicSet topicSet = mTopicMap.get(message.getTopicType());
             TopicItem topicItem = topicSet.getTopicItem(message.getTo());
             if (topicItem != null) {
-                if (message.getTopicType() == Topic.TopicType.PERSON) {
                     topicItem.getContext().writeAndFlush(MessageUtil.wrap(Message.CMD_ID.PUSH, message));
-                }
             }
         }
 

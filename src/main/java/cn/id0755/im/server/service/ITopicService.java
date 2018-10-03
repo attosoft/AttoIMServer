@@ -3,7 +3,11 @@ package cn.id0755.im.server.service;
 
 import cn.id0755.im.chat.proto.Push;
 import cn.id0755.im.chat.proto.Topic;
+import cn.id0755.im.server.service.wrapper.TopicSet;
 import io.netty.channel.ChannelHandlerContext;
+
+import java.util.Map;
+import java.util.Set;
 
 public interface ITopicService {
     /**
@@ -18,6 +22,12 @@ public interface ITopicService {
      * 发布者
      */
     void publisher(Topic.TopicType topicType,String topicId,ChannelHandlerContext context);
+
+    /**
+     * 获取所有发布者
+     * @return
+     */
+    Map<Topic.TopicType,TopicSet> getPublisherMap();
 
     /**
      * 投递消息
