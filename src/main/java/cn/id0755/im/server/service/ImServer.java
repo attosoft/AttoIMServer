@@ -3,10 +3,7 @@ package cn.id0755.im.server.service;
 import cn.id0755.im.chat.proto.Message;
 import cn.id0755.im.server.config.Config;
 import cn.id0755.im.server.handler.CommandReqHandler;
-import cn.id0755.im.server.handler.biz.LoginHandler;
-import cn.id0755.im.server.handler.biz.PingHandler;
-import cn.id0755.im.server.handler.biz.SendMsgHandler;
-import cn.id0755.im.server.handler.biz.SubjectTopicHandler;
+import cn.id0755.im.server.handler.biz.*;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -41,6 +38,7 @@ public class ImServer {
                             commandReqHandler.addBizHandler(new PingHandler());
                             commandReqHandler.addBizHandler(new SubjectTopicHandler());
                             commandReqHandler.addBizHandler(new SendMsgHandler());
+                            commandReqHandler.addBizHandler(new CommonHandler());
                             socketChannel.pipeline()
                                     .addLast(new ProtobufVarint32FrameDecoder())
                                     .addLast(new ProtobufDecoder(Message.MessageData.getDefaultInstance()))

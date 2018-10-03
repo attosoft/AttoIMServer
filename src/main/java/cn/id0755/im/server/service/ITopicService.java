@@ -15,7 +15,19 @@ public interface ITopicService {
     void subject(Topic.TopicInfo topicItem, ChannelHandlerContext observer);
 
     /**
-     * 发布
+     * 发布者
      */
-    void publish(Topic.TopicInfo topicItem, Push.Message msg);
+    void publisher(Topic.TopicType topicType,String topicId,ChannelHandlerContext context);
+
+    /**
+     * 投递消息
+     * @param message
+     */
+    void sendMsg(Push.Message message);
+
+    /**
+     * 发布消息
+     * @param message
+     */
+    void publishMsg(Push.Message message);
 }

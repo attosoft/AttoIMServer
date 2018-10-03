@@ -28,13 +28,50 @@ public enum TopicService implements ITopicService {
             topicItem.addObserver(observer);
         }
 
-        public void publish(Topic.TopicInfo topicInfo, Push.Message msg) {
-            TopicSet topicSet = mTopicMap.get(topicInfo.getTopicType());
-            TopicItem topicItem = topicSet.getTopicItem(topicInfo.getTopic());
-            Iterator<ChannelHandlerContext> iterable = topicItem.getObserver().iterator();
-            while (iterable.hasNext()) {
-                ChannelHandlerContext context = iterable.next();
-                context.writeAndFlush(MessageUtil.wrap(Message.CMD_ID.PUSH, msg));
+        public void publisher(Topic.TopicType topicType, String topicId, ChannelHandlerContext context) {
+            TopicSet topicSet = mTopicMap.get(topicType);
+            TopicItem topicItem = topicSet.getTopicItem(topicId);
+            if (topicItem == null) {
+                topicSet.addTopicItem(topicId, new TopicItem(context));
+            } else {
+                if (topicItem.getContext() != context) {
+                    if (topicItem.getContext().channel().isActive()) {
+                        //todo
+                    }
+                    topicItem.setContext(context);
+                } else if (!topicItem.getContext().channel().isActive()) {
+                    topicItem.setContext(context);
+                } else {
+                    //todo
+                }
+            }
+        }
+
+        public void sendMsg(Push.Message message) {
+            TopicSet topicSet = mTopicMap.get(message.getTopicType());
+            TopicItem topicItem = topicSet.getTopicItem(message.getTo());
+            if (topicItem != null) {
+                if (message.getTopicType() == Topic.TopicType.PERSON) {
+                    topicItem.getContext().writeAndFlush(MessageUtil.wrap(Message.CMD_ID.PUSH, message));
+                }
+            }
+        }
+
+        public void publishMsg(Push.Message message) {
+            TopicSet topicSet = mTopicMap.get(message.getTopicType());
+            TopicItem topicItem = topicSet.getTopicItem(message.getFrom());
+            if (topicItem != null) {
+                if (message.getTopicType() == Topic.TopicType.BROADCAST) {
+                    Iterator<ChannelHandlerContext> iterable = topicItem.getObserver().iterator();
+                    while (iterable.hasNext()) {
+                        ChannelHandlerContext context = iterable.next();
+                        if (context.channel().isActive()) {
+                            context.writeAndFlush(MessageUtil.wrap(Message.CMD_ID.PUSH, message));
+                        }else {
+                            iterable.remove();
+                        }
+                    }
+                }
             }
         }
     }

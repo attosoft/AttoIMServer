@@ -10,7 +10,7 @@ public class MessageUtil {
         return builder.build();
     }
 
-    public static Message.MessageData wrap(Message.CMD_ID cmd_id, String seqId,com.google.protobuf.AbstractMessageLite messageLite) {
+    public static Message.MessageData wrap(Message.CMD_ID cmd_id, String seqId,com.google.protobuf.MessageLite messageLite) {
         Message.MessageData.Builder builder = Message.MessageData.newBuilder();
         builder.setCmdId(cmd_id);
         builder.setSeqId(seqId);

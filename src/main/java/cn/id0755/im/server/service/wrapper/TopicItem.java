@@ -9,8 +9,21 @@ public class TopicItem {
 
     private Set<ChannelHandlerContext> contextSet = new ConcurrentSet<ChannelHandlerContext>();
 
-    public TopicItem() {
+    public ChannelHandlerContext getContext() {
+        return context;
+    }
 
+    public void setContext(ChannelHandlerContext context) {
+        this.context = context;
+    }
+
+    /**
+     * 主题自身
+     */
+    private ChannelHandlerContext context;
+
+    public TopicItem(ChannelHandlerContext context){
+        this.context = context;
     }
 
     public void addObserver(ChannelHandlerContext observer) {

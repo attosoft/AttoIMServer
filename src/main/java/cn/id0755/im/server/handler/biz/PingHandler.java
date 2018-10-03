@@ -6,7 +6,7 @@ import cn.id0755.im.server.handler.BaseBizHandler;
 import cn.id0755.im.server.utils.MessageUtil;
 import io.netty.channel.ChannelHandlerContext;
 
-public class PingHandler extends BaseBizHandler<HeartBeat.Ping> {
+public class PingHandler extends BaseBizHandler<HeartBeat.Ping, HeartBeat.Pong> {
     protected void channelRead(ChannelHandlerContext ctx, HeartBeat.Ping ping,String seqId) {
         HeartBeat.Pong pong = HeartBeat.Pong
                 .newBuilder()

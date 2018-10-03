@@ -16,7 +16,7 @@ public class TopicSet {
 
     public TopicItem getTopicItem(String topicId) {
         if (!mTopicMap.containsKey(topicId)) {
-            mTopicMap.put(topicId, new TopicItem());
+            return null;
         }
         return mTopicMap.get(topicId);
     }
