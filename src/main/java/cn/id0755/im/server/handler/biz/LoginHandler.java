@@ -22,7 +22,7 @@ public class LoginHandler extends BaseBizHandler<Login.LoginRequest, Login.Login
         Push.Message message = Push.Message.newBuilder()
                 .setFrom(loginRequest.getAccount())
                 .setTopicId(loginRequest.getAccount())
-                .setTo("All")
+                .setTo("online")
                 .setTopicType(Topic.TopicType.BROADCAST)
                 .setContent("{'status':'online'}")
                 .build();

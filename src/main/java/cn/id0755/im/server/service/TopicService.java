@@ -19,7 +19,9 @@ public enum TopicService implements ITopicService {
             mTopicMap.put(Topic.TopicType.SYS, new TopicSet());
             mTopicMap.put(Topic.TopicType.PERSON, new TopicSet());
             mTopicMap.put(Topic.TopicType.GROUP, new TopicSet());
-            mTopicMap.put(Topic.TopicType.BROADCAST, new TopicSet());
+            TopicSet broadcast = new TopicSet();
+            broadcast.addTopicItem("online",new TopicItem(null));
+            mTopicMap.put(Topic.TopicType.BROADCAST, broadcast);
         }
 
         public void subject(Topic.TopicInfo topicInfo, ChannelHandlerContext observer) {
@@ -61,7 +63,7 @@ public enum TopicService implements ITopicService {
 
         public void publishMsg(Push.Message message) {
             TopicSet topicSet = mTopicMap.get(message.getTopicType());
-            TopicItem topicItem = topicSet.getTopicItem(message.getFrom());
+            TopicItem topicItem = topicSet.getTopicItem(message.getTo());
             if (topicItem != null) {
                 if (message.getTopicType() == Topic.TopicType.BROADCAST) {
                     Iterator<ChannelHandlerContext> iterable = topicItem.getObserver().iterator();
